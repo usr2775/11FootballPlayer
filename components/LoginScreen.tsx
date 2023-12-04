@@ -1,7 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import { useAuth } from '../components/AuthContext';
 
+
+const LoginScreen = () => {
+  const navigation = useNavigation();
+  const { login } = useAuth();
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [isLoggedIn, setLoggedIn] = useState(false);
 
   const handleLogin = () => {
     if (username && password) {
