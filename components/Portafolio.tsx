@@ -1,7 +1,7 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import PersonalInfoScreen from './PersonalInfoScreen'; 
- 
+import QRCodeScreen from './QRCodeScreen'; 
 import { View, Text, StyleSheet, FlatList, Image } from 'react-native';
 
 const Tab = createBottomTabNavigator();
