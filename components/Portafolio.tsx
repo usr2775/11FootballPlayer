@@ -1,8 +1,9 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import PersonalInfoScreen from './PersonalInfoScreen'; 
-import QRCodeScreen from './QRCodeScreen'; 
+import PersonalInfoScreen from './PersonalInfoScreen';
+import QRCodeScreen from './QRCodeScreen';
 import { View, Text, StyleSheet, FlatList, Image } from 'react-native';
+import { useAuth } from './AuthContext';
 
 const Tab = createBottomTabNavigator();
 
@@ -25,69 +26,18 @@ const PortfolioItem = ({ title, description, imageUrl, characteristics }) => (
 );
 
 const Portfolio = () => {
-  const portfolioData = [
-    {
-      id: '1',
-      title: 'Jugador 1',
-      description: 'Delantero estrella',
-      imageUrl: require('../assets/image/img1.png'), 
-      characteristics: {
-        tiro: 90,
-        pase: 85,
-        defensa: 40,
-        velocidad: 88,
-      },
-    },
-    {
-      id: '2',
-      title: 'Jugador 2',
-      description: 'Mediocampista creativo',
-      imageUrl: require('../assets/image/img2.png'), 
-      characteristics: {
-        tiro: 75,
-        pase: 92,
-        defensa: 60,
-        velocidad: 78,
-      },
-    },
-    {
-      id: '3',
-      title: 'Jugador 3',
-      description: 'Defensor sólido',
-      imageUrl: require('../assets/image/img3.png'), 
-      characteristics: {
-        tiro: 50,
-        pase: 65,
-        defensa: 85,
-        velocidad: 70,
-      },
-    },
-    {
-      id: '4',
-      title: 'Jugador 4',
-      description: 'Veloz extremo',
-      imageUrl: require('../assets/image/img5.png'),
-      characteristics: {
-        tiro: 80,
-        pase: 70,
-        defensa: 30,
-        velocidad: 95,
-      },
-    },
-    {
-      id: '7',
-      title: 'Jugador 5',
-      description: 'Portero imbatible',
-      imageUrl: require('../assets/image/img6.png'),
-      characteristics: {
-        tiro: 10,
-        pase: 30,
-        defensa: 80,
-        velocidad: 40,
-      },
-    },
-  ];
+  const { user } = useAuth(); 
 
+  if (!user) {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.notLoggedInText}>Por favor, inicia sesión para ver el portfolio.</Text>
+      </View>
+    );
+  }
+
+  const portfolioData = [
+  ];
 
   return (
     <Tab.Navigator>
@@ -121,20 +71,19 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 16,
-    backgroundColor: '#000000', 
+    backgroundColor: '#000000',
+  },
+  notLoggedInText: {
+    fontSize: 16,
+    color: '#FFF',
+    textAlign: 'center',
+    marginTop: 20,
   },
   portfolioTitle: {
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 16,
     color: '#84A2C5',
-  },
-  portfolioItem: {
-    flexDirection: 'row',
-    marginBottom: 16,
-    backgroundColor: '#F3F3F3', 
-    borderRadius: 8,
-    overflow: 'hidden',
   },
   image: {
     width: 100,
