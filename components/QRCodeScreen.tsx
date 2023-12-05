@@ -15,5 +15,18 @@ const QRCodeScreen = () => {
   );
 };
 
-
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  qrCodeLabel: {
+    fontSize: 16,
+    textAlign: 'center',
+    marginTop: 20,
+    color: 'gray',
+    marginBottom: 50,
+  },
+});
 export default QRCodeScreen;
