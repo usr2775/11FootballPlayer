@@ -117,3 +117,51 @@ const Portfolio = () => {
   );
 };
 
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    padding: 16,
+    backgroundColor: '#000000', 
+  },
+  portfolioTitle: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 16,
+    color: '#84A2C5',
+  },
+  portfolioItem: {
+    flexDirection: 'row',
+    marginBottom: 16,
+    backgroundColor: '#F3F3F3', 
+    borderRadius: 8,
+    overflow: 'hidden',
+  },
+  image: {
+    width: 100,
+    height: 100,
+    resizeMode: 'cover',
+  },
+  textContainer: {
+    flex: 1,
+    padding: 8,
+  },
+  title: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 8,
+    color: '#000000', 
+  },
+  description: {
+    fontSize: 14,
+    color: '#666161', 
+  },
+  characteristicsContainer: {
+    marginTop: 8,
+  },
+  characteristicText: {
+    fontSize: 12,
+    color: '#333333', 
+  },
+});
+
+export default Portfolio;
