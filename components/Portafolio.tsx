@@ -1,6 +1,6 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-
+import PersonalInfoScreen from './PersonalInfoScreen'; 
  
 import { View, Text, StyleSheet, FlatList, Image } from 'react-native';
 
