@@ -30,7 +30,7 @@ const Portfolio = () => {
       id: '1',
       title: 'Jugador 1',
       description: 'Delantero estrella',
-      imageUrl: require('../assets/image/GSB56PTIOZNGFC2GLVR6C7GAGE.jpg'), 
+      imageUrl: require('../assets/image/img1.png'), 
       characteristics: {
         tiro: 90,
         pase: 85,
@@ -42,7 +42,7 @@ const Portfolio = () => {
       id: '2',
       title: 'Jugador 2',
       description: 'Mediocampista creativo',
-      imageUrl: 'https://example.com/player2.jpg',
+      imageUrl: require('../assets/image/img2.png'), 
       characteristics: {
         tiro: 75,
         pase: 92,
@@ -54,7 +54,7 @@ const Portfolio = () => {
       id: '3',
       title: 'Jugador 3',
       description: 'Defensor sólido',
-      imageUrl: 'https://example.com/player3.jpg',
+      imageUrl: require('../assets/image/img3.png'), 
       characteristics: {
         tiro: 50,
         pase: 65,
@@ -66,7 +66,7 @@ const Portfolio = () => {
       id: '4',
       title: 'Jugador 4',
       description: 'Veloz extremo',
-      imageUrl: 'https://example.com/player4.jpg',
+      imageUrl: require('../assets/image/img5.png'),
       characteristics: {
         tiro: 80,
         pase: 70,
@@ -78,7 +78,7 @@ const Portfolio = () => {
       id: '7',
       title: 'Jugador 5',
       description: 'Portero imbatible',
-      imageUrl: 'https://example.com/player5.jpg',
+      imageUrl: require('../assets/image/img6.png'),
       characteristics: {
         tiro: 10,
         pase: 30,
@@ -139,6 +139,7 @@ const styles = StyleSheet.create({
   image: {
     width: 100,
     height: 100,
+    borderRadius: 50,
     resizeMode: 'cover',
   },
   textContainer: {
@@ -162,6 +163,7 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: '#333333', 
   },
+  
 });
 
 export default Portfolio;
