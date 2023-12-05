@@ -75,8 +75,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#000000',
-    alignItems: 'center', 
-    paddingTop: 40,
+    alignItems: 'center', // Centra los elementos horizontalmente
+    paddingTop: 40, // Ajusta el espacio en la parte superior
   },
   title: {
     color: '#84A2C5',

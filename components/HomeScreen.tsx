@@ -2,10 +2,12 @@ import React from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import image1 from '../assets/image/imajeFotbool.jpeg';
 import { useNavigation } from '@react-navigation/native';
+import { useAuth } from './AuthContext';
 
 
 
 export function HomeScreen({  }) {
+  const { user } = useAuth();
 
 
               const navigation = useNavigation();
